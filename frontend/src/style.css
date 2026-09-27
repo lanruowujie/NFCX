@@ -166,3 +166,13 @@ table { width: 100%; border-collapse: collapse; } th { position: sticky; top: 0;
 .uid-preview-card code { color: var(--muted); font: 8px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
 ::-webkit-scrollbar { width: 8px; height: 8px; } ::-webkit-scrollbar-track { background: transparent; } ::-webkit-scrollbar-thumb { border: 2px solid transparent; border-radius: 99px; background: var(--scroll-thumb); background-clip: content-box; }
 @media (max-height: 760px) { .workspace { gap: 10px; padding: 10px; } .sidebar, .main-column { gap: 9px; } .device-panel, .card-panel, .key-status-panel { padding: 13px; } .card-visual { display: none; } .activity-panel { flex-basis: 168px; } .log-list { height: 42px; } }
+
+/* Safe migration wizard */
+.migration-card { width: min(620px, calc(100vw - 44px)); }
+.migration-intro { margin: 4px 0 14px; color: var(--text-secondary); font-size: 12px; line-height: 1.65; }
+.migration-steps { display: grid; gap: 8px; margin: 0 0 14px; padding: 0; list-style: none; }
+.migration-steps li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center; padding: 10px 11px; border: 1px solid var(--line-soft); border-radius: 8px; background: var(--row-bg); color: var(--text-secondary); font-size: 11px; line-height: 1.45; }
+.migration-steps b { display: grid; width: 24px; height: 24px; place-items: center; border-radius: 50%; color: var(--accent-contrast); background: var(--accent); font-size: 11px; }
+.migration-status { margin: 14px 0; padding: 12px; border: 1px solid rgba(85, 230, 191, .24); border-radius: 8px; color: var(--accent); background: var(--accent-dim); font-size: 12px; line-height: 1.45; }
+.migration-card footer { gap: 8px; flex-wrap: wrap; }
+.migration-card footer .primary-button { margin-left: auto; }
